@@ -1,0 +1,120 @@
+@font-face {
+    font-family: "Space Grotesk";
+    src: url('../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf');
+}
+
+html {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#site-body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../assets/images/aron-visuals-BXOXnQ26B7o-unsplash.jpg');
+    background-size: cover;
+    background-position-y: bottom;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center; /* for horizontal alignment */
+    justify-content: center; /* for vertical alignment */
+}
+
+#main-content {
+    position: relative;
+    background-color: #aaaaaa80;
+    padding: 20px 40px;
+    border-radius: 25px;
+}
+
+h1 {
+    color: #4a2611;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#form-inputs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.param-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 25px;
+}
+
+.time-arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    background-color: transparent;
+}
+
+.time-arrow-up {
+    border-bottom: 20px solid #4a2611;
+    border-top: none;
+}
+
+.time-arrow-down {
+    border-top: 20px solid #4a2611;
+    border-bottom: none;
+}
+
+.time-input {
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 30px;
+    margin: 10px 0;
+    color: #4a2611;
+    text-align: center;
+    font-weight: 900;
+    font-size: 25px;
+    padding-bottom: 2.5px;
+}
+
+/* disabling number input arrows */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.time-input:focus-visible {
+    outline: none;
+    background-color: #aaaaaa80;
+    border-bottom: 2.5px solid #4a2611;
+    padding-bottom: 0;
+}
+
+#form-button {
+    background-color: #4a2611;
+    color: #fff;
+    padding: 20px 10px;
+}
+
+footer {
+    display: none;
+    position: fixed;
+}
