@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Web Timer</title>
         <link rel="stylesheet" href="css/styles.css">
     </head>
@@ -13,29 +15,29 @@
                         <div id="form-container">
                             <div id="form-inputs">
                                 <div id="form-inputs-hours" class="param-container">
-                                    <div id="form-inputs-hours-arrow-up" class="time-arrow-up"></div>
+                                    <input id="form-inputs-hours-arrow-up" class="time-arrow time-arrow-up" type="button" title="Adicionar hora">
                                     <div id="form-inputs-hours-container" class="time-input-container">
-                                        <input id="form-inputs-hours-input" class="time-input" type="text">
+                                        <input id="form-inputs-hours-input" class="time-input" type="number" title="Horas" placeholder="Horas" value="00" min="0" max="59">
                                     </div>
-                                    <div id="form-inputs-hours-arrow-down" class="time-arrow-down"></div>
+                                    <input id="form-inputs-hours-arrow-down" class="time-arrow time-arrow-down" type="button" title="Remover hora">
                                 </div>
                                 <div id="form-inputs-minutes" class="param-container">
-                                    <div id="form-inputs-minutes-arrow-up" class="time-arrow-up"></div>
+                                    <input id="form-inputs-minutes-arrow-up" class="time-arrow time-arrow-up" type="button" title="Adicionar minuto">
                                     <div id="form-inputs-minutes-container" class="time-input-container">
-                                        <input id="form-inputs-minutes-input" class="time-input" type="text">
+                                        <input id="form-inputs-minutes-input" class="time-input" type="number" title="Minutos" placeholder="Minutos" value="00" min="0" max="59">
                                     </div>
-                                    <div id="form-inputs-minutes-arrow-down" class="time-arrow-down"></div>
+                                    <input id="form-inputs-minutes-arrow-down" class="time-arrow time-arrow-down" type="button" title="Remover minuto">
                                 </div>
                                 <div id="form-inputs-seconds" class="param-container">
-                                    <div id="form-inputs-seconds-arrow-up" class="time-arrow-up"></div>
+                                    <input id="form-inputs-seconds-arrow-up" class="time-arrow time-arrow-up" type="button" title="Adicionar segundo">
                                     <div id="form-inputs-seconds-container" class="time-input-container">
-                                        <input id="form-inputs-seconds-input" class="time-input" type="text">
+                                        <input id="form-inputs-seconds-input" class="time-input" type="number" title="Segundos" placeholder="Segundos" value="00" min="0" max="59">
                                     </div>
-                                    <div id="form-inputs-seconds-arrow-down" class="time-arrow-down"></div>
+                                    <input id="form-inputs-seconds-arrow-down" class="time-arrow time-arrow-down" type="button" title="Remover segundo">
                                 </div>
                             </div>
                             <div id="form-button-container">
-                                <input id="form-button" type="button" value="Iniciar">
+                                <input id="form-button" type="submit" value="Iniciar">
                             </div>
                         </div>
                     </form>
@@ -48,6 +50,9 @@
                 </div>
                 <div id="photographic-credit">
                     Photo by <a href="https://unsplash.com/@aronvisuals?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Aron Visuals</a> on <a href="https://unsplash.com/photos/BXOXnQ26B7o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                </div>
+                <div id="font-credit">
+                    Copyright 2020 The Space Grotesk Project Authors (<a href="https://github.com/floriankarsten/space-grotesk">https://github.com/floriankarsten/space-grotesk</a>)
                 </div>
             </footer>
         </div>
