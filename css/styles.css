@@ -73,12 +73,12 @@ h1 {
 }
 
 .time-arrow-up {
-    border-bottom: 20px solid #4a2611;
+    border-bottom: 10px solid #4a2611;
     border-top: none;
 }
 
 .time-arrow-down {
-    border-top: 20px solid #4a2611;
+    border-top: 10px solid #4a2611;
     border-bottom: none;
 }
 
@@ -114,7 +114,20 @@ input[type=number] {
 #form-button {
     background-color: #4a2611;
     color: #fff;
-    padding: 20px 10px;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: .5px 1px 2px #00000084;
+}
+
+#form-button:hover {
+    background-color: #5a3621;
+    box-shadow: .5px 1px 10px #00000084;
+}
+
+input[type=button], input[type=submit] {
+    cursor: pointer;
 }
 
 footer {
