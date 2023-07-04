@@ -21,21 +21,24 @@ html {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: center; /* for horizontal alignment */
-    justify-content: center; /* for vertical alignment */
+    align-content: center;
+    /* for horizontal alignment */
+    justify-content: center;
+    /* for vertical alignment */
 }
 
 #main-content {
     position: relative;
-    background-color: #aaaaaa80;
+    background-color: #aaaaaa60;
     padding: 20px 40px;
     border-radius: 25px;
+    box-shadow: 1px 1px 40px #00000088;
 }
 
 h1 {
     color: #000;
     font-size: 25px;
-    font-weight: 900;
+    font-weight: bold;
 }
 
 #form-container {
@@ -101,6 +104,7 @@ input::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
 input[type=number] {
     -moz-appearance: textfield;
 }
@@ -127,11 +131,25 @@ input[type=number] {
     box-shadow: .5px 1px 10px #00000084;
 }
 
-input[type=button], input[type=submit] {
+input[type=button],
+input[type=submit] {
     cursor: pointer;
 }
 
 footer {
-    display: none;
     position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 12px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    opacity: 0.5;
+    box-shadow: 5px 4px #000000;
+}
+
+a {
+    color: #4a2611;
+    cursor: pointer;
+
 }
