@@ -131,6 +131,21 @@ input[type=number] {
     box-shadow: .5px 1px 10px #00000084;
 }
 
+#timer {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#timer-clock {
+    display: contents;
+    font-size: 400%;
+    font-weight: bold;
+    color: #4a2611;
+}
+
 input[type=button],
 input[type=submit] {
     cursor: pointer;

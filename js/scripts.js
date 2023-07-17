@@ -10,6 +10,12 @@ var hourup = document.getElementById('form-inputs-hours-arrow-up');
 var hourinput = document.getElementById('form-inputs-hours-input');
 var hourdown = document.getElementById('form-inputs-hours-arrow-down');
 
+var form = document.getElementsByTagName("form")[0];
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    startTimer();
+});
+
 let time = new Date();
 time.setHours(0); time.setMinutes(0); time.setSeconds(0);
 let oldHours = parseInt(hourinput.value);
@@ -109,4 +115,25 @@ hourdown.onclick = function(event) {
 
 function addSec() {
     time.setSeconds(time.getSeconds() + 1);
+}
+
+function startTimer() {
+    hideParams();
+    showClock();
+}
+
+function hideParams() {
+    var mainContent = document.getElementById("main-content");
+    var timerParams = document.getElementById("timer-params");
+    mainContent.style.width = "100%";
+    mainContent.style.height = "100%";
+    mainContent.style.backgroundColor = "#ffffff";
+    mainContent.style.padding = "0"
+    mainContent.style.borderRadius = "0";
+    timerParams.style.display = "none";
+}
+
+function showClock() {
+    var timer = document.getElementById("timer");
+    timer.style.display = "flex";
 }
