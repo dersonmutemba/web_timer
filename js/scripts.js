@@ -63,15 +63,15 @@ async function adjusttime() {
     newHours = parseInt(hourinput.value);
     newMinutes = parseInt(minuteinput.value);
     newSeconds = parseInt(secondinput.value);
-    if(newHours != oldHours) {
+    if (newHours != oldHours) {
         time.setHours(newHours);
         oldHours = newHours;
     }
-    if(newMinutes != oldMinutes) {
+    if (newMinutes != oldMinutes) {
         time.setMinutes(newMinutes);
         oldMinutes = newMinutes;
     }
-    if(newSeconds != oldSeconds) {
+    if (newSeconds != oldSeconds) {
         time.setSeconds(newSeconds);
         oldSeconds = newSeconds;
     }
@@ -86,8 +86,8 @@ secondup.onclick = function (event) {
     time.setSeconds(time.getSeconds() + 1);
     setinputvalues();
 }
-seconddown.onclick = function(event) {
-    if(time.getHours() != 0 || time.getMinutes() != 0 || time.getSeconds() != 0) {
+seconddown.onclick = function (event) {
+    if (time.getHours() != 0 || time.getMinutes() != 0 || time.getSeconds() != 0) {
         time.setSeconds(time.getSeconds() - 1);
         setinputvalues();
     }
@@ -97,8 +97,8 @@ minuteup.onclick = function (event) {
     time.setMinutes(time.getMinutes() + 1);
     setinputvalues();
 }
-minutedown.onclick = function(event) {
-    if(time.getHours() != 0 || time.getMinutes() != 0) {
+minutedown.onclick = function (event) {
+    if (time.getHours() != 0 || time.getMinutes() != 0) {
         time.setMinutes(time.getMinutes() - 1);
     } else {
         time.setHours(0); time.setMinutes(0); time.setSeconds(0);
@@ -110,8 +110,8 @@ hourup.onclick = function (event) {
     time.setHours(time.getHours() + 1);
     setinputvalues();
 }
-hourdown.onclick = function(event) {
-    if(time.getHours() != 0) {
+hourdown.onclick = function (event) {
+    if (time.getHours() != 0) {
         time.setHours(time.getHours() - 1);
     } else {
         time.setHours(0); time.setMinutes(0); time.setSeconds(0);
