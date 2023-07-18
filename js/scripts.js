@@ -123,9 +123,12 @@ function addSec() {
     time.setSeconds(time.getSeconds() + 1);
 }
 
+var changingTime = time;
+
 function startTimer() {
     hideParams();
     showClock();
+    controlTime();
 }
 
 function hideParams() {
@@ -148,4 +151,25 @@ function showClock() {
     timerClockHour.innerText = valueintwodigits(time.getHours() + "");
     timerClockMinute.innerText = valueintwodigits(time.getMinutes() + "");
     timerClockSecond.innerText = valueintwodigits(time.getSeconds() + "");
+}
+
+function updateClock() {
+    var timerClockHour = document.getElementById("timer-clock-hour");
+    var timerClockMinute = document.getElementById("timer-clock-minute");
+    var timerClockSecond = document.getElementById("timer-clock-second");
+    timerClockHour.innerText = valueintwodigits(changingTime.getHours() + "");
+    timerClockMinute.innerText = valueintwodigits(changingTime.getMinutes() + "");
+    timerClockSecond.innerText = valueintwodigits(changingTime.getSeconds() + "");
+}
+
+function delay (duration) {
+    return new Promise(resolve => setTimeout(resolve, duration));
+}
+
+async function controlTime() {
+    while (parseInt(changingTime.getHours()) != 0 || parseInt(changingTime.getMinutes()) != 0 || parseInt(changingTime.getSeconds()) != 0) {
+        await delay(1000);
+        changingTime.setSeconds(changingTime.getSeconds() - 1);
+        updateClock();
+    }
 }
