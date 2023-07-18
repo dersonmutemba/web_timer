@@ -28,18 +28,24 @@ let newSeconds = parseInt(secondinput.value);
 function formatinput(input) {
     input.addEventListener('input', function () {
         this.value = parseInt(this.value) + '';
-        if (parseInt(this.value) > parseInt(input.max)) {
-            this.value = input.max;
+        if (parseInt(this.value) > parseInt(this.max)) {
+            this.value = this.max;
         }
-        if (input.value.length == 1) {
-            input.value = '0' + input.value;
-        }
-        if (input.value.length == 0) {
-            input.value = '00';
-        }
+        this.value = valueintwodigits(this.value);
         adjusttime();
     });
 }
+
+function valueintwodigits(value) {
+    if (value.length == 1) {
+        value = '0' + value;
+    }
+    if (value.length == 0) {
+        value = '00';
+    }
+    return value;
+}
+
 formatinput(secondinput);
 formatinput(minuteinput);
 formatinput(hourinput);
@@ -136,4 +142,10 @@ function hideParams() {
 function showClock() {
     var timer = document.getElementById("timer");
     timer.style.display = "flex";
+    var timerClockHour = document.getElementById("timer-clock-hour");
+    var timerClockMinute = document.getElementById("timer-clock-minute");
+    var timerClockSecond = document.getElementById("timer-clock-second");
+    timerClockHour.innerText = valueintwodigits(time.getHours() + "");
+    timerClockMinute.innerText = valueintwodigits(time.getMinutes() + "");
+    timerClockSecond.innerText = valueintwodigits(time.getSeconds() + "");
 }
