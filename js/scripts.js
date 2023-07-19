@@ -10,12 +10,6 @@ var hourup = document.getElementById('form-inputs-hours-arrow-up');
 var hourinput = document.getElementById('form-inputs-hours-input');
 var hourdown = document.getElementById('form-inputs-hours-arrow-down');
 
-var form = document.getElementsByTagName("form")[0];
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    startTimer();
-});
-
 let time = new Date();
 time.setHours(0); time.setMinutes(0); time.setSeconds(0);
 let oldHours = parseInt(hourinput.value);
@@ -34,16 +28,6 @@ function formatinput(input) {
         this.value = valueintwodigits(this.value);
         adjusttime();
     });
-}
-
-function valueintwodigits(value) {
-    if (value.length == 1) {
-        value = '0' + value;
-    }
-    if (value.length == 0) {
-        value = '00';
-    }
-    return value;
 }
 
 formatinput(secondinput);
@@ -121,55 +105,4 @@ hourdown.onclick = function (event) {
 
 function addSec() {
     time.setSeconds(time.getSeconds() + 1);
-}
-
-var changingTime = time;
-
-function startTimer() {
-    hideParams();
-    showClock();
-    controlTime();
-}
-
-function hideParams() {
-    var mainContent = document.getElementById("main-content");
-    var timerParams = document.getElementById("timer-params");
-    mainContent.style.width = "100%";
-    mainContent.style.height = "100%";
-    mainContent.style.backgroundColor = "#ffffff";
-    mainContent.style.padding = "0"
-    mainContent.style.borderRadius = "0";
-    timerParams.style.display = "none";
-}
-
-function showClock() {
-    var timer = document.getElementById("timer");
-    timer.style.display = "flex";
-    var timerClockHour = document.getElementById("timer-clock-hour");
-    var timerClockMinute = document.getElementById("timer-clock-minute");
-    var timerClockSecond = document.getElementById("timer-clock-second");
-    timerClockHour.innerText = valueintwodigits(time.getHours() + "");
-    timerClockMinute.innerText = valueintwodigits(time.getMinutes() + "");
-    timerClockSecond.innerText = valueintwodigits(time.getSeconds() + "");
-}
-
-function updateClock() {
-    var timerClockHour = document.getElementById("timer-clock-hour");
-    var timerClockMinute = document.getElementById("timer-clock-minute");
-    var timerClockSecond = document.getElementById("timer-clock-second");
-    timerClockHour.innerText = valueintwodigits(changingTime.getHours() + "");
-    timerClockMinute.innerText = valueintwodigits(changingTime.getMinutes() + "");
-    timerClockSecond.innerText = valueintwodigits(changingTime.getSeconds() + "");
-}
-
-function delay (duration) {
-    return new Promise(resolve => setTimeout(resolve, duration));
-}
-
-async function controlTime() {
-    while (parseInt(changingTime.getHours()) != 0 || parseInt(changingTime.getMinutes()) != 0 || parseInt(changingTime.getSeconds()) != 0) {
-        await delay(1000);
-        changingTime.setSeconds(changingTime.getSeconds() - 1);
-        updateClock();
-    }
 }
