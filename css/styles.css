@@ -95,7 +95,7 @@ h1 {
     text-align: center;
     font-weight: 700;
     font-size: 40px;
-    padding-bottom: 2.5px;
+    border-bottom: 2.5px solid #4a2611;
 }
 
 /* disabling number input arrows */
@@ -112,7 +112,6 @@ input[type=number] {
 .time-input:focus-visible {
     outline: none;
     background-color: #aaaaaa80;
-    border-bottom: 2.5px solid #4a2611;
     padding-bottom: 0;
 }
 
