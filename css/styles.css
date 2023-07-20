@@ -15,9 +15,9 @@ html {
 #site-body {
     height: 100vh;
     width: 100vw;
-    background-image: url('../assets/images/aron-visuals-BXOXnQ26B7o-unsplash.jpg');
+    /*background-image: url('../assets/images/aron-visuals-BXOXnQ26B7o-unsplash.jpg');
     background-size: cover;
-    background-position-y: bottom;
+    background-position-y: bottom;*/
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -31,8 +31,9 @@ html {
     position: relative;
     background-color: #aaaaaa60;
     padding: 20px 40px;
-    border-radius: 25px;
-    box-shadow: 1px 1px 40px #00000088;
+    /* border-radius: 25px;*/
+    border: 1px solid #000;
+    box-shadow: 10px 10px #00000088;
 }
 
 h1 {
@@ -120,14 +121,13 @@ input[type=number] {
     color: #fff;
     font-size: 20px;
     padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    box-shadow: .5px 1px 2px #00000044;
+    border: 1px solid #000;
+    box-shadow: 2px 2px #00000064;
 }
 
 #form-button:hover {
     background-color: #5a3621;
-    box-shadow: .5px 1px 10px #00000084;
+    box-shadow: 5px 4px #00000084;
 }
 
 #timer {
@@ -158,11 +158,35 @@ footer {
     margin: 10px;
     padding: 10px;
     background-color: #fff;
-    opacity: 0.5;
+    opacity: 0.75;
+    border: 1px solid #000E;
     box-shadow: 5px 4px #000000;
 }
 
 a {
     color: #4a2611;
     cursor: pointer;
+}
+
+.history-navigation-button {
+    position: fixed;
+    margin: 20px;
+    top: 0;
+    left: 0;
+    font-size: 25px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 2px 2px #0000005f;
+    font-family: monospace;
+    font-weight: bold;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #000;
+}
+
+.history-navigation-button:hover {
+    box-shadow: 4px 5px #0000007f;
 }
